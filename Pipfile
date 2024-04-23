@@ -30,6 +30,7 @@ flake8-html = "*"
 pytest-django = "*"
 sentry-sdk = {extras = ["django"], version = "*"}
 python-dotenv = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
