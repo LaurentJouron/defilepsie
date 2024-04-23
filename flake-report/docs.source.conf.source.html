@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>docs\source\conf.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="docs.source.conf.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               docs\source\conf.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="kn">import</span> <span class="nn">os</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="kn">import</span> <span class="nn">sys</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="kn">import</span> <span class="nn">time</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> &nbsp;</tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;tools/extensions&quot;</span><span class="p">))</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;includes&quot;</span><span class="p">))</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> &nbsp;</tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> <span class="n">project</span> <span class="o">=</span> <span class="s2">&quot;Defilepsie&quot;</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> <span class="n">copyright</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;2024-</span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">, Laurent Jouron&#39;</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> <span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;Laurent Jouron&quot;</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> &nbsp;</tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i> <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i>     <span class="s2">&quot;notfound.extension&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i>     <span class="s2">&quot;sphinx.ext.extlinks&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i>     <span class="s2">&quot;sphinx.ext.intersphinx&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i>     <span class="s2">&quot;sphinx.ext.todo&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i>     <span class="s2">&quot;sphinx_copybutton&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i>     <span class="s2">&quot;sphinx_inline_tabs&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i>     <span class="s2">&quot;sphinxext.opengraph&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i> <span class="p">]</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i> &nbsp;</tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i> <span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i>     <span class="s2">&quot;.rst&quot;</span><span class="p">:</span> <span class="s2">&quot;restructuredtext&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i>     <span class="s2">&quot;.txt&quot;</span><span class="p">:</span> <span class="s2">&quot;restructuredtext&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i>     <span class="s2">&quot;.md&quot;</span><span class="p">:</span> <span class="s2">&quot;markdown&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i> <span class="p">}</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i> &nbsp;</tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i> <span class="c1"># The master toctree document.</span></tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i> <span class="n">master_doc</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i> &nbsp;</tt>
+            </div>
+            <div id="l31"
+               class="code sev- "><tt><i>31</i> <span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_templates&quot;</span><span class="p">]</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i> <span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i>     <span class="s2">&quot;_build&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i>     <span class="s2">&quot;venv*&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l35"
+               class="code sev- "><tt><i>35</i>     <span class="s2">&quot;env*&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l36"
+               class="code sev- "><tt><i>36</i>     <span class="s2">&quot;README.rst&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l37"
+               class="code sev- "><tt><i>37</i>     <span class="s2">&quot;.github&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l38"
+               class="code sev- "><tt><i>38</i> <span class="p">]</span></tt>
+            </div>
+            <div id="l39"
+               class="code sev- "><tt><i>39</i> &nbsp;</tt>
+            </div>
+            <div id="l40"
+               class="code sev- "><tt><i>40</i> <span class="n">language</span> <span class="o">=</span> <span class="s2">&quot;fr&quot;</span></tt>
+            </div>
+            <div id="l41"
+               class="code sev- "><tt><i>41</i> &nbsp;</tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i> <span class="n">nitpicky</span> <span class="o">=</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i> &nbsp;</tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i> <span class="c1"># -- Options for HTML output -------------------------------------------------</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i> <span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i> &nbsp;</tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i> <span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;furo&quot;</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i> <span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_static&quot;</span><span class="p">]</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i> <span class="n">html_logo</span> <span class="o">=</span> <span class="s2">&quot;_static/defilepsie-logo.png&quot;</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i> <span class="n">html_favicon</span> <span class="o">=</span> <span class="s2">&quot;_static/defilepsie.png&quot;</span></tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i> <span class="n">html_title</span> <span class="o">=</span> <span class="s2">&quot;Défilepsie&quot;</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i> <span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i>     <span class="s2">&quot;source_repository&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/LaurentJouron/defilepsie&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i>     <span class="s2">&quot;source_directory&quot;</span><span class="p">:</span> <span class="s2">&quot;docs/&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i>     <span class="s2">&quot;source_branch&quot;</span><span class="p">:</span> <span class="s2">&quot;master/source&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i>     <span class="s2">&quot;sidebar_hide_name&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i>     <span class="s2">&quot;navigation_with_keys&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span></tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i>     <span class="s2">&quot;top_of_page_button&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span></tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i>     <span class="s2">&quot;light_css_variables&quot;</span><span class="p">:</span> <span class="p">{</span></tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i>         <span class="s2">&quot;color-brand-primary&quot;</span><span class="p">:</span> <span class="s2">&quot;#bf1e2e&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i>         <span class="s2">&quot;color-brand-content&quot;</span><span class="p">:</span> <span class="s2">&quot;#bf1e2e&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i>         <span class="s2">&quot;font-stack&quot;</span><span class="p">:</span> <span class="s2">&quot;Verdana, Arial, sans-serif&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i>         <span class="s2">&quot;font-stack--monospace&quot;</span><span class="p">:</span> <span class="s2">&quot;Courier, monospace&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i>     <span class="p">},</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i>     <span class="s2">&quot;dark_css_variables&quot;</span><span class="p">:</span> <span class="p">{</span></tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i>         <span class="s2">&quot;color-brand-primary&quot;</span><span class="p">:</span> <span class="s2">&quot;#3C65AF&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i>         <span class="s2">&quot;color-brand-content&quot;</span><span class="p">:</span> <span class="s2">&quot;#3C65AF&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i>         <span class="s2">&quot;font-stack&quot;</span><span class="p">:</span> <span class="s2">&quot;Verdana, Arial, sans-serif&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i>         <span class="s2">&quot;font-stack--monospace&quot;</span><span class="p">:</span> <span class="s2">&quot;Courier, monospace&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i>     <span class="p">},</span></tt>
+            </div>
+            <div id="l71"
+               class="code sev- "><tt><i>71</i>     <span class="s2">&quot;footer_icons&quot;</span><span class="p">:</span> <span class="p">[</span></tt>
+            </div>
+            <div id="l72"
+               class="code sev- "><tt><i>72</i>         <span class="p">{</span></tt>
+            </div>
+            <div id="l73"
+               class="code sev- "><tt><i>73</i>             <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GitHub&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l74"
+               class="code sev- "><tt><i>74</i>             <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/LaurentJouron/defilepsie&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l75"
+               class="code sev- "><tt><i>75</i>             <span class="s2">&quot;html&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l76"
+               class="code sev- "><tt><i>76</i>             <span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;fa-brands fa-solid fa-github fa-2x&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l77"
+               class="code sev- "><tt><i>77</i>         <span class="p">},</span></tt>
+            </div>
+            <div id="l78"
+               class="code sev- "><tt><i>78</i>     <span class="p">],</span></tt>
+            </div>
+            <div id="l79"
+               class="code sev- "><tt><i>79</i> <span class="p">}</span></tt>
+            </div>
+            <div id="l80"
+               class="code sev- "><tt><i>80</i> &nbsp;</tt>
+            </div>
+            <div id="l81"
+               class="code sev- "><tt><i>81</i> <span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i>     <span class="s2">&quot;devguide_overrides.css&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (88 > 79 characters)</li>
+               
+               </ul><tt><i>83</i>     <span class="s2">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (82 > 79 characters)</li>
+               
+               </ul><tt><i>84</i>     <span class="s2">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l85"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (83 > 79 characters)</li>
+               
+               </ul><tt><i>85</i>     <span class="s2">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l86"
+               class="code sev- "><tt><i>86</i> <span class="p">]</span></tt>
+            </div>
+            <div id="l87"
+               class="code sev- "><tt><i>87</i> &nbsp;</tt>
+            </div>
+            <div id="l88"
+               class="code sev- "><tt><i>88</i> <span class="n">html_js_files</span> <span class="o">=</span> <span class="p">[</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i>     <span class="s2">&quot;activate_tab.js&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i> <span class="p">]</span></tt>
+            </div>
+            <div id="l91"
+               class="code sev- "><tt><i>91</i> &nbsp;</tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i> <span class="n">pygments_style</span> <span class="o">=</span> <span class="s2">&quot;sphinx&quot;</span></tt>
+            </div>
+            <div id="l93"
+               class="code sev- "><tt><i>93</i> <span class="n">pygments_dark_style</span> <span class="o">=</span> <span class="s2">&quot;monokai&quot;</span></tt>
+            </div>
+            <div id="l94"
+               class="code sev- "><tt><i>94</i> &nbsp;</tt>
+            </div>
+            <div id="l95"
+               class="code sev- "><tt><i>95</i> <span class="n">todo_include_todos</span> <span class="o">=</span> <span class="kc">True</span></tt>
+            </div>
+            <div id="l96"
+               class="code sev- "><tt><i>96</i> &nbsp;</tt>
+            </div>
+            <div id="l97"
+               class="code sev- "><tt><i>97</i> <span class="c1"># sphinx-notfound-page</span></tt>
+            </div>
+            <div id="l98"
+               class="code sev- "><tt><i>98</i> <span class="n">notfound_urls_prefix</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span></tt>
+            </div>
+            <div id="l99"
+               class="code sev- "><tt><i>99</i> &nbsp;</tt>
+            </div>
+            <div id="l100"
+               class="code sev- "><tt><i>100</i> <span class="c1"># sphinx.ext.extlinks</span></tt>
+            </div>
+            <div id="l101"
+               class="code sev- "><tt><i>101</i> <span class="n">extlinks</span> <span class="o">=</span> <span class="p">{</span></tt>
+            </div>
+            <div id="l102"
+               class="code sev- "><tt><i>102</i>     <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;https://github.com/</span><span class="si">%s</span><span class="s2">/&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">),</span></tt>
+            </div>
+            <div id="l103"
+               class="code sev- "><tt><i>103</i> <span class="p">}</span></tt>
+            </div>
+            <div id="l104"
+               class="code sev- "><tt><i>104</i> &nbsp;</tt>
+            </div>
+            <div id="l105"
+               class="code sev- "><tt><i>105</i> <span class="c1"># sphinxext-opengraph config</span></tt>
+            </div>
+            <div id="l106"
+               class="code sev- "><tt><i>106</i> <span class="n">ogp_site_url</span> <span class="o">=</span> <span class="s2">&quot;https://laurentjouron.github.io/&quot;</span></tt>
+            </div>
+            <div id="l107"
+               class="code sev- "><tt><i>107</i> <span class="n">ogp_site_name</span> <span class="o">=</span> <span class="s2">&quot;Defilepsie&quot;</span></tt>
+            </div>
+            <div id="l108"
+               class="code sev- "><tt><i>108</i> <span class="n">ogp_image</span> <span class="o">=</span> <span class="s2">&quot;_static/defilepsie-logo.png&quot;</span></tt>
+            </div>
+            <div id="l109"
+               class="code sev- "><tt><i>109</i> <span class="n">ogp_custom_meta_tags</span> <span class="o">=</span> <span class="p">[</span></tt>
+            </div>
+            <div id="l110"
+               class="code sev- "><tt><i>110</i>     <span class="s1">&#39;&lt;meta property=&quot;og:image:width&quot; content=&quot;200&quot;&gt;&#39;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l111"
+               class="code sev- "><tt><i>111</i>     <span class="s1">&#39;&lt;meta property=&quot;og:image:height&quot; content=&quot;200&quot;&gt;&#39;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l112"
+               class="code sev- "><tt><i>112</i>     <span class="s1">&#39;&lt;meta name=&quot;theme-color&quot; content=&quot;#3776ab&quot;&gt;&#39;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l113"
+               class="code sev- "><tt><i>113</i> <span class="p">]</span></tt>
+            </div>
+            <div id="l114"
+               class="code sev- "><tt><i>114</i> &nbsp;</tt>
+            </div>
+            <div id="l115"
+               class="code sev- "><tt><i>115</i> <span class="c1"># Strip the dollar prompt when copying code</span></tt>
+            </div>
+            <div id="l116"
+               class="code sev- "><tt><i>116</i> <span class="n">copybutton_prompt_text</span> <span class="o">=</span> <span class="s2">&quot;$ &quot;</span></tt>
+            </div>
+            <div id="l117"
+               class="code sev- "><tt><i>117</i> <span class="n">copybutton_line_continuation_character</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>
