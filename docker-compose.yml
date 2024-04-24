@@ -8,6 +8,8 @@ services:
         container_name: defilepsie_container
         depends_on:
             - postgres
+            - redis
+            - memcached
         restart: always
         ports:
             - "8000:8000"
@@ -28,5 +30,11 @@ services:
         volumes:
             - "defilepsie:/var/lib/postgresql/data"
 
+    memcached:
+        image: memcached:1.6
+
+    redis:
+        image: redis:6 
+
 volumes:
-    defilepsie:
+    defilepsie: {}

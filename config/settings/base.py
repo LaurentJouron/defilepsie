@@ -29,7 +29,10 @@ sentry_sdk.init(
     ],
 )
 
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = env(
+    "SECRET_KEY",
+    default="django-insecure-g$p8(oy!la!jca!nfg(86^12g@cwsrs#g*)4a37oh@70+_$av_",
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")

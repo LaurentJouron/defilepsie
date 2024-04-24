@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta name="Défilepsie" content="Lutte contre l'épilepsie" />
+    <meta name="Laurent Jouron" content="Admin" />
+    <!-- FAVICON -->   
+    <link rel="icon" type="image/x-icon" href="{% static 'images/defilepsie.png' %}" />
+    <!-- CSS -->
+    {% block head_styles %}{% endblock head_styles %}  
+    <!-- JS -->
+    {% block head_scripts %}{% endblock head_scripts %}
+    <!-- TITLE -->
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body class="{% block body_classes %}{% endblock body_classes %}">
+    {% block messages %}{% endblock messages %}
+
+    {% block navigation %}{% include 'partials/navigation.html' %}{% endblock navigation %}
+
+    {% block header %}{% endblock header %}
+
+    {% block outer_content %}{% block content %}{% endblock content %}{% endblock outer_content %}
+
+    {% block footer %}{% include 'partials/footer.html' %}{% endblock footer %}
+
+    {% block modal %}{% endblock modal %}
+
+    {% block bottom_scripts %}{% endblock bottom_scripts %}
+</body>
+</html>
