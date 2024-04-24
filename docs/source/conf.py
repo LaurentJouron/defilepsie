@@ -46,7 +46,7 @@ nitpicky = True
 
 html_theme = "furo"
 html_static_path = ["_static"]
-html_logo = "_static/defilepsie-logo.png"
+html_logo = "_static/defilepsie.png"
 html_favicon = "_static/defilepsie.png"
 html_title = "Défilepsie"
 html_theme_options = {
@@ -105,7 +105,7 @@ extlinks = {
 # sphinxext-opengraph config
 ogp_site_url = "https://laurentjouron.github.io/"
 ogp_site_name = "Defilepsie"
-ogp_image = "_static/defilepsie-logo.png"
+ogp_image = "_static/defilepsie.png"
 ogp_custom_meta_tags = [
     '<meta property="og:image:width" content="200">',
     '<meta property="og:image:height" content="200">',
