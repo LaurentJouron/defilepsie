@@ -33,18 +33,9 @@
 .. toctree::
     :maxdepth: 3
    
-    header/index
-    description/index
-    information/index
-    service/index
-    events/index
-    traitement/index
-    blog_chat/index
-    defis/index
-    users/index
-    django/index
-    docker/index
-    postgres/index
+    fonctionnal/index
+    technique/index
+    architecture/index
 
 
 Indices and tables
