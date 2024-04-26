@@ -1,18 +1,15 @@
-"""
-Django settings for defilepsie project.
-"""
-
-from pathlib import Path
+from dotenv import load_dotenv
 import os
+import environ
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
-from django.contrib.messages import constants as messages
-from config import env
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-PROJECT_DIR = BASE_DIR / "config"
-APPS_DIR = BASE_DIR / "defilepsie"
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
+load_dotenv()
 
 sentry_sdk.init(
     dsn=os.environ["DSN"],
@@ -29,19 +26,24 @@ sentry_sdk.init(
     ],
 )
 
-SECRET_KEY = env(
-    "SECRET_KEY",
-    default="django-insecure-g$p8(oy!la!jca!nfg(86^12g@cwsrs#g*)4a37oh@70+_$av_",
-)
+# Set the project base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
+
+# False if not in os.environ because of casting above
 DEBUG = env("DEBUG")
+
+# Raises Django's ImproperlyConfigured
+# exception if SECRET_KEY not in os.environ
+SECRET_KEY = env("SECRET_KEY")
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 
 # Application definition
 INSTALLED_APPS = [
-    "defilepsie.home.apps.HomeConfig",
+    "home.apps.HomeConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -51,13 +53,13 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django.middleware.security.SecurityMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -65,9 +67,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [
-            APPS_DIR / "templates",
-        ],
+        "DIRS": [f"{BASE_DIR}/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -77,7 +77,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
             ],
         },
-    },
+    }
 ]
 
 WSGI_APPLICATION = "config.wsgi.application"
@@ -86,34 +86,10 @@ WSGI_APPLICATION = "config.wsgi.application"
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB"),
-        "USER": os.getenv("POSTGRES_USER"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
-        "HOST": os.getenv("POSTGRES_HOST"),
-        "PORT": os.getenv("POSTGRES_PORT"),
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
-
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("redis", 6379)],
-        },
-    },
-}
-
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.memcached.MemcachedCache",
-        "LOCATION": "memcached:11211",
-    }
-}
-
-CACHE_MIDDLEWARE_ALIAS = "default"
-CACHE_MIDDLEWARE_SECONDS = 60 * 15  # 15 minutes
-CACHE_MIDDLEWARE_KEY_PREFIX = "home"
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -130,16 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-STATICFILES_FINDERS = [
-    "django.contrib.staticfiles.finders.FileSystemFinder",
-    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-]
-
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
 LANGUAGE_CODE = "fr-FR"
 
-TIME_ZONE = "Europe"
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -147,53 +116,18 @@ USE_L10N = True
 
 USE_TZ = True
 
-# See https://docs.djangoproject.com/en/4.1/ref/contrib/staticfiles/#manifeststaticfilesstorage
-STATICFILES_STORAGE = (
-    "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
-)
-
 STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = [APPS_DIR / "static"]
+STATIC_ROOT = f"{BASE_DIR}/staticfiles"
 
-# Configuration of python-webpack-boilerplate
-WEBPACK_LOADER = {
-    "MANIFEST_FILE": APPS_DIR / "static" / "manifest.json",
-}
+# Configuration of directories for static files
+STATICFILES_DIRS = [f"{BASE_DIR}/static"]
 
-MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "media/"
-
-ADMINS = [
-    ("Laurent Jouron", "jouronlaurent@hotmail.com"),
-]
-MANAGERS = ADMINS
-
-# Email configuration
-EMAIL_SUBJECT_PREFIX = "[Defilepsie]"
-DEFAULT_FROM_EMAIL = "jouronlaurent@hotmail.com"
+MEDIA_ROOT = f"{BASE_DIR}/media"
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-# Django Crispy Forms Configuration
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
-
-# Configuration de of the authentication
-AUTH_USER_MODEL = "users.User"
-LOGIN_REDIRECT_URL = "pages:home"
-LOGOUT_REDIRECT_URL = "pages:home"
-
-# Configuration of message tags
-MESSAGE_TAGS = {
-    messages.DEBUG: "alert-secondary",
-    messages.INFO: "alert-info",
-    messages.SUCCESS: "alert-success",
-    messages.WARNING: "alert-warning",
-    messages.ERROR: "alert-danger",
-}
 
 STORAGES = {
     "staticfiles": {
