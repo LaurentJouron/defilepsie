@@ -6,6 +6,8 @@
 Redis
 =====
 
+Image de Redis sur DockerHub
+
 .. raw:: html
 
    <a href="https://hub.docker.com/_/redis" target=_blank>

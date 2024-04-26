@@ -10,7 +10,8 @@ Fonctionnelle
 .. toctree::
     :maxdepth: 3
    
-    blog_chat/index
+    blog/index
+    chat/index
     defis/index
     description/index
     events/index

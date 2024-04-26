@@ -14,3 +14,6 @@ Technique
     docker/index
     postgres/index
     redis/index
+    navigation/index
+    footer/index
+    licence/index

@@ -2,9 +2,9 @@
 
     <img src="../../_static/defilepsie-logo.png" alt="little logo" width="300" height="150" />
 
-=========
-Blog/Chat
-=========
+====
+Chat
+====
 
 Créer une section où les membres peuvent interagir (blog ou tchat). Les utilisateurs pourraient partager leurs défis, 
 leurs expériences, poser des questions, etc.
