@@ -18,7 +18,7 @@ polib==1.2.0
 Pygments==2.17.2
 python-docs-theme==2024.3
 regex==2023.12.25
-requests==2.31.0
+requests==2.32.0
 six==1.16.0
 snowballstemmer==2.2.0
 soupsieve==2.5
