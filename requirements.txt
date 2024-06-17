@@ -38,5 +38,5 @@ sphinxcontrib-serializinghtml==1.1.10
 sphinxext-opengraph==0.9.1
 sphinxext-rediraffe==0.2.7
 tornado==6.4
-urllib3==2.2.1
+urllib3==2.2.2
 zipp==3.18.1
